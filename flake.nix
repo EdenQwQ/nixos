@@ -102,6 +102,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hexecute.url = "github:ThatOtherAndrew/Hexecute";
-    nixpkgs-kimi-cli.url = "github:jetjinser/nixpkgs/jinser/kimi-cli";
+    kimi-cli.url = "github:MoonshotAI/kimi-cli";
   };
 }

@@ -18,37 +18,6 @@
     SILICONFLOW_API_KEY = "$(cat ${config.age.secrets.siliconflow_token.path})";
   };
   home.packages = with pkgs; [
-    nur.repos.charmbracelet.crush
-    (inputs.nixpkgs-kimi-cli.legacyPackages.${pkgs.stdenv.hostPlatform.system}.kimi-cli.overrideAttrs {
-      src = fetchFromGitHub {
-        owner = "MoonshotAI";
-        repo = "kimi-cli";
-        rev = "8c942b97c52996885a508e37e503d37b63e5bf90";
-        hash = "sha256-mRoyGpZv6C2wva3ishqqRLQwoabeKDtCrpVoFBwX5QM=";
-      };
-    })
+    inputs.kimi-cli.packages.${pkgs.system}.default
   ];
-  xdg.configFile."crush/crush.json".text = ''
-    {
-      "providers": {
-        "siliconflow": {
-          "id": "siliconflow",
-          "name": "siliconflow",
-          "base_url": "https://api.siliconflow.cn/v1",
-          "api_key": "$SILICONFLOW_API_KEY",
-          "type": "openai",
-          "models": [
-            {
-              "id": "Pro/deepseek-ai/DeepSeek-V3.2-Exp",
-              "name": "DeepSeek-V3.2",
-              "cost_per_1m_in": 2,
-              "cost_per_1m_out": 3,
-              "context_window": 160000,
-              "default_max_token": 5000
-            }
-          ]
-        }
-      }
-    }
-  '';
 }
