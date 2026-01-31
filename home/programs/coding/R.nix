@@ -44,6 +44,10 @@ let
       hdf5r
       formatR
       ggnewscale
+      jmuOutlier
+      vegan
+      plotly
+      ggiraph
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {
