@@ -87,8 +87,6 @@
             }
             {
               id = "ControlCenter";
-              customIconPath = "";
-              icon = "";
               useDistroLogo = false;
             }
           ];

@@ -37,7 +37,7 @@ with config.lib.stylix.colors;
     prompt-text = "Can I have a"
     prompt-padding = 15
 
-    background-color = #${base00}
+    background-color = #${base00}dd
     text-color = #${base05}
 
     prompt-color = #${base00}
@@ -77,7 +77,7 @@ with config.lib.stylix.colors;
     # font = Comic Mono Nerd Font
     font = Hug Me Tight
     prompt-padding = 15
-    background-color = #${base00}aa
+    background-color = #${base00}99
     text-color = #${base05}
     prompt-color = #${base0B}
     selection-color = #${base0E}

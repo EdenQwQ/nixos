@@ -4,8 +4,40 @@ let
   extraConfig =
     # kdl
     ''
+      blur {
+          passes 3
+          offset 3
+          noise 0.02
+          saturation 1.5
+      }
+      window-rule {
+          background-effect {
+              xray true
+              blur {
+                  on
+              }
+          }
+      }
+      layer-rule {
+          match namespace="launcher"
+          background-effect {
+              xray false
+              blur {
+                  on
+              }
+          }
+      }
+      layer-rule {
+          match namespace="noctalia-bar-content-*"
+          background-effect {
+              xray false
+              blur {
+                  on
+              }
+          }
+      }
+
       recent-windows {
-          // off
           open-delay-ms 150
 
           highlight {
@@ -43,9 +75,6 @@ let
         #   layout {
         #       blur {
         #           on
-        #           passes 2
-        #           radius 5
-        #           noise 0.1
         #       }
         # ''
       ]

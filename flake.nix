@@ -53,14 +53,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
-    # niri-unstable = {
-    #   url = "github:YalTeR/niri";
-    #   # url = "github:visualglitch91/niri/feat/blur-lite";
-    #   flake = false;
-    # };
+    niri-unstable = {
+      url = "github:niri-wm/niri/wip/branch";
+      flake = false;
+    };
     niri = {
       url = "github:sodiboo/niri-flake";
-      # inputs.niri-unstable.follows = "niri-unstable";
+      inputs.niri-unstable.follows = "niri-unstable";
     };
     nur.url = "github:nix-community/NUR";
     stylix = {
