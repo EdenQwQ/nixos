@@ -10,7 +10,9 @@
   programs.noctalia-shell = {
     colors = with config.lib.stylix.colors.withHashtag; {
       mError = base08;
+      mHover = base0E;
       mOnError = base00;
+      mOnHover = base00;
       mOnPrimary = base00;
       mOnSecondary = base01;
       mOnSurface = base05;
