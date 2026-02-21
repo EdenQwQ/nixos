@@ -19,10 +19,11 @@
     enable = true;
     defaultEditor = true;
     performance.combinePlugins = {
-      enable = true;
+      enable = false;
       standalonePlugins = [
         "copilot.lua"
         "nvim-treesitter"
+        "hmts.nvim"
       ];
     };
     globals = {

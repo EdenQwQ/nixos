@@ -26,7 +26,7 @@ let
       layer-rule {
           match namespace="noctalia-bar-content-*"
           background-effect {
-              xray true
+              xray false
               blur true
           }
       }

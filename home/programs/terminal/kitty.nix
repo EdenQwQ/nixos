@@ -45,7 +45,6 @@
   };
   stylix.targets.kitty.enable = true;
   home.packages = with pkgs; [
-    termpdfpy
     mdcat
   ];
 }

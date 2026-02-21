@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     alejandra
-    nixfmt-rfc-style
+    nixfmt
     texlab
     nodePackages.prettier
     antigravity
