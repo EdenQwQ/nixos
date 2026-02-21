@@ -90,7 +90,7 @@
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dankMaterialShell.url = "github:AvengeMedia/DankMaterialShell";
+    dank-material-shell.url = "github:AvengeMedia/DankMaterialShell";
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
       inputs.quickshell.follows = "quickshell";

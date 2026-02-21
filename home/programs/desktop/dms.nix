@@ -54,22 +54,7 @@ let
   };
 in
 {
-  # programs.quickshell.configs.dms =
-  #   let
-  #     dankMaterialShell =
-  #       inputs.dankMaterialShell.packages.${pkgs.stdenv.hostPlatform.system}.dankMaterialShell.overrideAttrs
-  #         {
-  #           installPhase = ''
-  #             mkdir -p $out/etc/xdg/quickshell/DankMaterialShell
-  #             cp -r . $out/etc/xdg/quickshell/DankMaterialShell
-  #             ln -s $out/etc/xdg/quickshell/DankMaterialShell $out/etc/xdg/quickshell/dms
-  #             substituteInPlace $out/etc/xdg/quickshell/DankMaterialShell/Widgets/DankIcon.qml \
-  #               --replace "Material Symbols Rounded" "Monofur Nerd Font"
-  #           '';
-  #         };
-  #   in
-  #   "${dankMaterialShell}/etc/xdg/quickshell/DankMaterialShell" |> lib.mkForce;
-  programs.dankMaterialShell.quickshell.package =
+  programs.dank-material-shell.quickshell.package =
     inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
   xdg.configFile."DankMaterialShell/stylix-colors.json".text = builtins.toJSON colorTheme;
   xdg.configFile."DankMaterialShell/settings.json".text = # json

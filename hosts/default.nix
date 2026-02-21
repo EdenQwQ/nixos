@@ -22,7 +22,7 @@ let
     inputs.agenix.homeManagerModules.default
     ../secrets/age.nix
     # inputs.mangowc.hmModules.mango
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dank-material-shell.homeModules.dank-material-shell
     inputs.caelestia-shell.homeManagerModules.default
     inputs.noctalia-shell.homeModules.default
   ]

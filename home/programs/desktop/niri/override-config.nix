@@ -16,6 +16,13 @@ let
               blur true
           }
       }
+      window-rule {
+          match is-floating=true
+          background-effect {
+              xray false
+              blur true
+          }
+      }
       layer-rule {
           match namespace="launcher"
           background-effect {

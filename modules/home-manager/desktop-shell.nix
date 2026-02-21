@@ -18,7 +18,7 @@
       enable = config.desktopShell == "waybar";
       systemd.enable = config.desktopShell == "waybar";
     };
-    programs.dankMaterialShell = {
+    programs.dank-material-shell = {
       enable = config.desktopShell == "dms";
       systemd.enable = config.desktopShell == "dms";
     };
