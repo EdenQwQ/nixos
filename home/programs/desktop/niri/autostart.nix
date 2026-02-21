@@ -9,7 +9,7 @@ let
   niri-autostart = pkgs.writeShellApplication {
     name = "niri-autostart";
     runtimeInputs = with pkgs; [
-      swww
+      awww
       mihomo
       wlsunset
       systemd
@@ -26,20 +26,20 @@ let
         killall swhks
         swhks &
         doas swhkd -c ~/.config/niri/swhkd/niri.swhkdrc &
-        swww kill
-        swww-daemon --namespace "background" &
-        swww-daemon --namespace "backdrop" &
-        # swww restore --namespace "background"
-        # swww restore --namespace "backdrop"
+        awww kill
+        awww-daemon --namespace "background" &
+        awww-daemon --namespace "backdrop" &
+        # awww restore --namespace "background"
+        # awww restore --namespace "backdrop"
         mihomo -d ~/.config/clash &
         wlsunset -s 00:00 -S 00:00 -t 5000 -T 5001 &
       ''
       + (
         builtins.attrNames config.monitors
         |> map (monitor: [
-          "swww img --namespace background -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-file)\""
+          "awww img --namespace background -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-file)\""
           "sleep 0.2"
-          "swww img --namespace backdrop -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-blurred-file)\""
+          "awww img --namespace backdrop -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-blurred-file)\""
           "sleep 0.2"
         ])
         |> builtins.concatLists

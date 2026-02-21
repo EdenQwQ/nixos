@@ -102,5 +102,6 @@
     };
     hexecute.url = "github:ThatOtherAndrew/Hexecute";
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
+    awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 }

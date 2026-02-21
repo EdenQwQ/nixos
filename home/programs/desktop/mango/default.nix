@@ -330,7 +330,7 @@
     autostart_sh =
       let
         setWallpaper = monitor: ''
-          swww img --namespace background -o ${monitor} ~/Pictures/Wallpapers/generated/$(cat ~/.cache/swww/${monitor} | cut -d'/' -f7 | cut -d'-' -f2- | sd "\-blurred" "")
+          awww img --namespace background -o ${monitor} ~/Pictures/Wallpapers/generated/$(cat ~/.cache/awww/${monitor} | cut -d'/' -f7 | cut -d'-' -f2- | sd "\-blurred" "")
         '';
       in
       ''
@@ -338,8 +338,8 @@
         killall swhks
         swhks &
         doas swhkd -c ~/.config/mango/swhkdrc &
-        swww kill
-        swww-daemon --namespace background &
+        awww kill
+        awww-daemon --namespace background &
         killall clash-meta
         clash-meta -d ~/.config/clash &
         wlsunset -s 00:00 -S 00:00 -t 5000 -T 5001 &

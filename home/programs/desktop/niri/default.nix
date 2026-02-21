@@ -115,7 +115,7 @@
           ];
         layer-rules = [
           {
-            matches = [ { namespace = "swww-daemonbackdrop"; } ];
+            matches = [ { namespace = "awww-daemonbackdrop"; } ];
             place-within-backdrop = true;
           }
           {

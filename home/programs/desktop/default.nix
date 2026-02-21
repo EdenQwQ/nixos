@@ -13,7 +13,7 @@
     # ./mango
   ];
   home.packages = with pkgs; [
-    swww
+    awww
     swaybg
     kanshi
     wlsunset

@@ -28,7 +28,7 @@
     sway = prev.sway.overrideAttrs (oldAttrs: {
       passthru.providedSessions = [ "scroll" ];
     });
-    inherit (inputs.nixpkgs-wayland.packages.${final.stdenv.hostPlatform.system}) swww;
+    inherit (inputs.awww.packages.${final.stdenv.hostPlatform.system}) awww;
   };
 
   inherit (inputs.niri.overlays) niri;
