@@ -107,7 +107,7 @@
       ui = {
         fontDefault = "Hug Me Tight";
         fontFixed = "Maple Mono";
-        panelBackgroundOpacity = 0.9;
+        panelBackgroundOpacity = 0.75;
       };
       dock.enabled = false;
       wallpaper.enabled = false;

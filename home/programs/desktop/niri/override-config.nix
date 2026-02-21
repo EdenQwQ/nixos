@@ -13,27 +13,21 @@ let
       window-rule {
           background-effect {
               xray true
-              blur {
-                  on
-              }
+              blur true
           }
       }
       layer-rule {
           match namespace="launcher"
           background-effect {
               xray false
-              blur {
-                  on
-              }
+              blur true
           }
       }
       layer-rule {
           match namespace="noctalia-bar-content-*"
           background-effect {
-              xray false
-              blur {
-                  on
-              }
+              xray true
+              blur true
           }
       }
 
