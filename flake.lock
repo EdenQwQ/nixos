@@ -812,11 +812,11 @@
     "niri-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1771672342,
-        "narHash": "sha256-52CxMRH2kVGpsPBiZM+996b6i/3XkmOrySm5zqwWc+o=",
+        "lastModified": 1771683761,
+        "narHash": "sha256-ZaASbpeFF3sQ8uJAheuuuDMnymqpLfrsyf3hr9B5CMM=",
         "owner": "niri-wm",
         "repo": "niri",
-        "rev": "86f42d1ed9ab787c52ace073e0b3218e26530d25",
+        "rev": "3b9f6ca062056348ef1a280716718d96c591246d",
         "type": "github"
       },
       "original": {

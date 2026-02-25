@@ -69,15 +69,15 @@ let
   finalNiriConfig =
     builtins.replaceStrings
       [
-        # "layout {"
+        "output \"${config.lib.monitors.mainMonitorName}\" {"
       ]
       [
-        # ''
-        #   layout {
-        #       blur {
-        #           on
-        #       }
-        # ''
+        ''
+          output "${config.lib.monitors.mainMonitorName}" {
+              hot-corners {
+                  top-right
+              }
+        ''
       ]
       config.programs.niri.finalConfig
     + "\n"

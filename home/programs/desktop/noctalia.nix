@@ -65,7 +65,7 @@
             {
               id = "Tray";
               drawerEnabled = false;
-              colorizeIcons = true;
+              colorizeIcons = false;
               blacklist = [ ];
             }
             {
