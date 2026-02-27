@@ -5,11 +5,11 @@
   ...
 }:
 let
-  pkgs-stable = inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  pkgs-r = inputs.nixpkgs-r.legacyPackages.${pkgs.stdenv.hostPlatform.system};
   colors = config.lib.stylix.colors.withHashtag;
   rPkgs =
-    with pkgs-stable.rPackages;
-    with pkgs-stable;
+    with pkgs-r.rPackages;
+    with pkgs-r;
     [
       ggplot2
       dplyr
@@ -99,10 +99,10 @@ let
         ];
       })
     ];
-  myR = pkgs-stable.rWrapper.override {
+  myR = pkgs-r.rWrapper.override {
     packages = rPkgs;
   };
-  myRstudio = pkgs-stable.rstudioWrapper.override {
+  myRstudio = pkgs-r.rstudioWrapper.override {
     packages = rPkgs;
   };
 in
