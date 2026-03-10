@@ -8,5 +8,7 @@
     zjuconnect_password.file = ./zjuconnect_password.age;
     linkai_token.file = ./linkai_token.age;
     anyrouter_token.file = ./anyrouter_token.age;
+    kimi_token.file = ./kimi_token.age;
+    telegram_bot_token.file = ./telegram_bot_token.age;
   };
 }

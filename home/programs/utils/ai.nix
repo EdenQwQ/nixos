@@ -16,6 +16,8 @@
     ANTHROPIC_AUTH_TOKEN = "$(cat ${config.age.secrets.anyrouter_token.path})";
     ANTHROPIC_BASE_URL = "https://anyrouter.top";
     SILICONFLOW_API_KEY = "$(cat ${config.age.secrets.siliconflow_token.path})";
+    MOONSHOT_API_KEY = "$(cat ${config.age.secrets.kimi_token.path})";
+    TELEGRAM_BOT_TOKEN = "$(cat ${config.age.secrets.telegram_bot_token.path})";
   };
   home.packages = with pkgs; [
     inputs.kimi-cli.packages.${pkgs.stdenv.hostPlatform.system}.default

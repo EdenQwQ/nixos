@@ -31,7 +31,11 @@ let
           }
       }
       layer-rule {
-          match namespace="noctalia-bar-content-*"
+          match namespace="noctalia-*"
+          exclude namespace="noctalia-bar-exclusion*"
+          exclude namespace="noctalia-desktop*"
+          exclude namespace="noctalia-osd*"
+          exclude namespace="noctalia-notifications*"
           background-effect {
               xray false
               blur true

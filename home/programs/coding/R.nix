@@ -48,6 +48,15 @@ let
       vegan
       plotly
       ggiraph
+      caret
+      randomForest
+      ranger
+      doParallel
+      tidyLPA
+      ggpattern
+      kernlab
+      qgraph
+      NetworkComparisonTest
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {

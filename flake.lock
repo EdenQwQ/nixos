@@ -876,11 +876,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1763964548,
-        "narHash": "sha256-JTRoaEWvPsVIMFJWeS4G2isPo15wqXY/otsiHPN0zww=",
+        "lastModified": 1772441848,
+        "narHash": "sha256-H3W5PSJQTh8Yp51PGU3GUoGCcrD+y7nCsxYHQr+Orvw=",
         "owner": "nix-community",
         "repo": "nixd",
-        "rev": "d4bf15e56540422e2acc7bc26b20b0a0934e3f5e",
+        "rev": "c896f916addae5b133ee0f4f01f9cd93906f62ea",
         "type": "github"
       },
       "original": {
@@ -1095,11 +1095,11 @@
     },
     "nixpkgs_14": {
       "locked": {
-        "lastModified": 1771612669,
-        "narHash": "sha256-NWCFzQPkU7YVZ5ILQxjrgAkJN2ggHwF8YMSEFTvmlh8=",
+        "lastModified": 1772963539,
+        "narHash": "sha256-9jVDGZnvCckTGdYT53d/EfznygLskyLQXYwJLKMPsZs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "58877e1d22288f5ce74a21d3c119d86395d837f2",
+        "rev": "9dcb002ca1690658be4a04645215baea8b95f31d",
         "type": "github"
       },
       "original": {
@@ -1317,18 +1317,40 @@
         "type": "github"
       }
     },
-    "noctalia-shell": {
+    "noctalia-qs": {
       "inputs": {
         "nixpkgs": [
+          "noctalia-shell",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1771640976,
-        "narHash": "sha256-quTSp+f5kT0TGjbP6h88G4f7/eBaNrdMcOAScKySh94=",
+        "lastModified": 1772227064,
+        "narHash": "sha256-f821ZSoGpa/aXrWq0gPpea9qBnX8KDyavGKkptz2Mog=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-qs",
+        "rev": "0741d27d2f7db567270f139c5d1684614ecf9863",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-qs",
+        "type": "github"
+      }
+    },
+    "noctalia-shell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "noctalia-qs": "noctalia-qs"
+      },
+      "locked": {
+        "lastModified": 1772319635,
+        "narHash": "sha256-ZVrtz08Fyp6knPEAbcD2+OYvs0T4pTII/xMElHpi31M=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "f240a7ca2c9133ac338ac23c9b57c16489ad0fc2",
+        "rev": "5d03c56f4c8d7243e6ae97c045afa44aaac2bf0e",
         "type": "github"
       },
       "original": {

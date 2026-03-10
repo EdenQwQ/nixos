@@ -10,6 +10,8 @@ let
     "zjuconnect_password"
     "linkai_token"
     "anyrouter_token"
+    "kimi_token"
+    "telegram_bot_token"
   ];
 in
 builtins.listToAttrs (
