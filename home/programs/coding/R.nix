@@ -35,7 +35,7 @@ let
       bain
       patchwork
       factoextra
-      umap
+      rPackages.umap
       concaveman
       Rtsne
       see
@@ -57,6 +57,8 @@ let
       kernlab
       qgraph
       NetworkComparisonTest
+      rPackages.pls
+      rPackages.MASS
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {
