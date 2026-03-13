@@ -21,5 +21,6 @@
   };
   home.packages = with pkgs; [
     inputs.kimi-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.airi.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

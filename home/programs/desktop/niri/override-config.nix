@@ -23,6 +23,19 @@ let
               blur true
           }
       }
+      window-rule {
+          match app-id="ai.moeru.airi"
+          open-floating true
+          background-effect {
+              blur false
+          }
+          border {
+              off
+          }
+          shadow {
+              off
+          }
+      }
       layer-rule {
           match namespace="launcher"
           background-effect {

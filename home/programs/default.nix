@@ -9,6 +9,6 @@
     ./documents
     ./network
     ./study
-    # ./social
+    ./social
   ];
 }
