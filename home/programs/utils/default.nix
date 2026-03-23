@@ -48,6 +48,7 @@
     nautilus
     gnome-disk-utility
     upower
+    android-tools
   ];
   imports = [
     ./eye-candy.nix

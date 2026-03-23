@@ -40,14 +40,8 @@
     };
 
     activation = {
-      niri-transition =
-        lib.hm.dag.entryAfter [ "writeBoundary" ]
-          # bash
-          ''
-            run ${pkgs.niri-unstable}/bin/niri msg action do-screen-transition
-          '';
       reload-shell =
-        lib.hm.dag.entryAfter [ "niri-transition" ]
+        lib.hm.dag.entryAfter [ "writeBoundary" ]
           # bash
           ''
             # only run stop if the service is active

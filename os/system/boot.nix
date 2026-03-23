@@ -2,7 +2,8 @@
 {
   boot = {
     kernelPackages =
-      inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages_zen;
+      # inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages_zen;
+      pkgs.linuxPackages_latest;
     kernelParams = [
       "loglevel=3"
       "quiet"

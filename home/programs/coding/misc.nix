@@ -5,7 +5,6 @@
     nixfmt
     texlab
     nodePackages.prettier
-    antigravity
     julia-bin
   ];
 }
