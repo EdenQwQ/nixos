@@ -393,7 +393,7 @@ def expand_all_hex(text: str) -> str:
 
     return re.sub(
         r"((?<!&)#[A-Fa-f0-9]{3})\b",
-        lambda match: ("#" + "".join([c * 2 for c in match.group(1)[1:]])),
+        lambda match: "#" + "".join([c * 2 for c in match.group(1)[1:]]),
         text,
     )
 

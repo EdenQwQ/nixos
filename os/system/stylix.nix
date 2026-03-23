@@ -9,26 +9,25 @@ let
   cfg = self.homeConfigurations."${user}@${host}".config;
 in
 {
-  stylix =
-    {
-      enable = true;
-      autoEnable = false;
-      targets = {
-        console.enable = true;
-        gnome.enable = true;
-        grub.enable = true;
-        plymouth.enable = true;
-      };
-    }
-    // (
-      if builtins.hasAttr "base16Scheme" cfg.stylix then
-        { base16Scheme = lib.mkDefault cfg.stylix.base16Scheme; }
-      else
-        { }
-    )
-    // (
-      if builtins.hasAttr "image" cfg.stylix then { image = lib.mkDefault cfg.stylix.image; } else { }
-    );
+  stylix = {
+    enable = true;
+    autoEnable = false;
+    targets = {
+      console.enable = true;
+      gnome.enable = true;
+      grub.enable = true;
+      plymouth.enable = true;
+    };
+  }
+  // (
+    if builtins.hasAttr "base16Scheme" cfg.stylix then
+      { base16Scheme = lib.mkDefault cfg.stylix.base16Scheme; }
+    else
+      { }
+  )
+  // (
+    if builtins.hasAttr "image" cfg.stylix then { image = lib.mkDefault cfg.stylix.image; } else { }
+  );
   specialisation = builtins.mapAttrs (name: value: {
     configuration = {
       stylix =

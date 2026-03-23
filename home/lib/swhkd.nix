@@ -62,7 +62,7 @@ let
       includes ? [ ],
       ignores ? [ ],
       modes ? [ ],
-      extraConfig ? '''',
+      extraConfig ? "",
     }:
     (
       (map (file: "include ${file}") includes)

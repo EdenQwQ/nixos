@@ -43,7 +43,7 @@
                 in
                 {
                   nixos.expr = # nix
-                    ''${flake}.nixosConfigurations.${host}.options'';
+                    "${flake}.nixosConfigurations.${host}.options";
                   home_manager.expr = # nix
                     ''${flake}.homeConfigurations."${user}@${host}".options'';
                 };
