@@ -49,6 +49,7 @@
     gnome-disk-utility
     upower
     android-tools
+    tree-sitter
   ];
   imports = [
     ./eye-candy.nix

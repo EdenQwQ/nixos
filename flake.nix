@@ -104,6 +104,5 @@
     hexecute.url = "github:ThatOtherAndrew/Hexecute";
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
     awww.url = "git+https://codeberg.org/LGFae/awww";
-    airi.url = "github:github:moeru-ai/airi/41ce282e955c66b71317ffa597308008aaa084e9";
   };
 }

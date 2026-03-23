@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   monitors = {
     "eDP-1" = {
@@ -41,6 +42,10 @@
       };
       rotation = 90;
     };
+  };
+  programs.niri.settings = {
+    input.touch.enable = true;
+    input.touch.map-to-output = config.lib.monitors.mainMonitorName;
   };
   home.stateVersion = "26.05";
 }

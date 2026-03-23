@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  zju-connect = pkgs.callPackage ./zju-connect.nix { };
   swhkd = pkgs.callPackage ./swhkd.nix { };
   kose-font = pkgs.callPackage ./fonts/kose.nix { };
   hugmetight-font = pkgs.callPackage ./fonts/hugmetight.nix { };

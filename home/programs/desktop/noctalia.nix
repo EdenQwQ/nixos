@@ -30,9 +30,11 @@
       setupCompleted = true;
       bar = {
         density = "comfortable";
-        floating = false;
+        floating = true;
         showCapsule = true;
         outerCorners = true;
+        marginVertical = 6;
+        marginHorizontal = 6;
         widgets = {
           center = [
             {
@@ -92,14 +94,47 @@
           ];
         };
       };
+      controlCenter.cards = [
+        {
+          enabled = true;
+          id = "profile-card";
+        }
+        {
+          enabled = true;
+          id = "shortcuts-card";
+        }
+        {
+          enabled = true;
+          id = "audio-card";
+        }
+        {
+          enabled = true;
+          id = "brightness-card";
+        }
+        {
+          enabled = true;
+          id = "weather-card";
+        }
+        {
+          enabled = true;
+          id = "media-sysmon-card";
+        }
+      ];
+      idle = {
+        enabled = true;
+        screenOffTimeout = 500;
+        lockTimeout = 560;
+        suspendTimeout = 1800;
+        fadeDuration = 10;
+      };
       colorSchemes = {
         generateTemplatesForPredefined = false;
         useWallpaperColors = false;
       };
       general = {
         avatarImage = "/home/${user}/.face";
-        forceBlackScreenCorners = true;
-        showScreenCorners = true;
+        forceBlackScreenCorners = false;
+        showScreenCorners = false;
       };
       location = {
         name = "西湖";

@@ -44,11 +44,7 @@ let
           }
       }
       layer-rule {
-          match namespace="noctalia-*"
-          exclude namespace="noctalia-bar-exclusion*"
-          exclude namespace="noctalia-desktop*"
-          exclude namespace="noctalia-osd*"
-          exclude namespace="noctalia-notifications*"
+          match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
           background-effect {
               xray false
               blur true

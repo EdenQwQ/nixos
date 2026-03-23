@@ -25,6 +25,7 @@
 
         set -g fish_color_command = blue --italics
         set -g fish_color_quote = yellow --italics
+        set -g fish_key_bindings fish_vi_key_bindings
       '';
       plugins = with pkgs.fishPlugins; [
         {
