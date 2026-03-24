@@ -4,7 +4,7 @@
   system.stateVersion = "26.05";
   networking.hostName = host;
   boot.kernelParams = [
-    "i8042.nopnp"
+    "i8042.dumbkbd"
     "xe.enable_psr=0"
   ];
   # services.udev.extraHwdb = ''
