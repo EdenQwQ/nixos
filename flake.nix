@@ -49,6 +49,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-r.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-new-libinput.url = "github:skowalak/nixpkgs/libinput-update-1.31.0";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";

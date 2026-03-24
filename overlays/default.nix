@@ -29,6 +29,7 @@
       passthru.providedSessions = [ "scroll" ];
     });
     inherit (inputs.awww.packages.${final.stdenv.hostPlatform.system}) awww;
+    inherit (inputs.nixpkgs-new-libinput.legacyPackages.${final.stdenv.hostPlatform.system}) libinput;
   };
 
   inherit (inputs.niri.overlays) niri;

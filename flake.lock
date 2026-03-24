@@ -962,6 +962,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-new-libinput": {
+      "locked": {
+        "lastModified": 1773138432,
+        "narHash": "sha256-9FtasZuEakGyXCqt7IbSALG5bgvKRKpp5DpHqlUS6V4=",
+        "owner": "skowalak",
+        "repo": "nixpkgs",
+        "rev": "3444cf952961ac97b3366df43fa36ec393f85599",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skowalak",
+        "ref": "libinput-update-1.31.0",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-r": {
       "locked": {
         "lastModified": 1773964973,
@@ -1579,6 +1595,7 @@
         "nixGL": "nixGL",
         "nixd": "nixd",
         "nixpkgs": "nixpkgs_14",
+        "nixpkgs-new-libinput": "nixpkgs-new-libinput",
         "nixpkgs-r": "nixpkgs-r",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixpkgs-wayland": "nixpkgs-wayland",

@@ -76,7 +76,7 @@ let
         }
     )
     // {
-      inherit polarity;
+      polarity = forceOrDefault polarity;
     };
 
   buildSpecialisation =
