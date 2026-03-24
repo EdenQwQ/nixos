@@ -33,6 +33,7 @@
         input = {
           focus-follows-mouse.enable = true;
           touchpad.natural-scroll = false;
+          touchpad.dwt = false;
           keyboard.xkb.options = "caps:escape";
         };
         environment = {
