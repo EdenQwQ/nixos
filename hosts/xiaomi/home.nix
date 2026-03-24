@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   monitors = {
     "eDP-1" = {
@@ -46,6 +46,11 @@
   programs.niri.settings = {
     input.touch.enable = true;
     input.touch.map-to-output = config.lib.monitors.mainMonitorName;
+  };
+  stylix.cursor = {
+    package = pkgs.hachiyo-cursors;
+    name = "hachiyo";
+    size = 32;
   };
   home.stateVersion = "26.05";
 }

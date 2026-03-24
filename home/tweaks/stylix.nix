@@ -11,11 +11,6 @@ in
     autoEnable = false;
     targets.gtk.enable = true;
     targets.gtk.flatpakSupport.enable = true;
-    cursor = {
-      package = pkgs.graphite-cursors;
-      name = "graphite-dark";
-      size = 32;
-    };
     fonts = {
       monospace.name = "Maple Mono";
       monospace.package = pkgs.maple-mono-variable;

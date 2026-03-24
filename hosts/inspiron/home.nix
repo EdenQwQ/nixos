@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   monitors = {
     "eDP-1" = {
@@ -28,6 +29,11 @@
       };
       rotation = 90;
     };
+  };
+  stylix.cursor = {
+    package = pkgs.graphite-cursors;
+    name = "graphite-dark";
+    size = 32;
   };
   home.stateVersion = "23.11";
 }
