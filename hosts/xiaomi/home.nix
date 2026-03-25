@@ -29,19 +29,6 @@
       };
       rotation = 90;
     };
-    "DP-1" = {
-      scale = 1.6;
-      mode = {
-        width = 2560;
-        height = 1600;
-        refresh = 60.0;
-      };
-      position = {
-        x = 0;
-        y = 60;
-      };
-      rotation = 90;
-    };
   };
   programs.niri.settings = {
     input.touch.enable = true;
