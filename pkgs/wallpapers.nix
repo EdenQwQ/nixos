@@ -1,4 +1,8 @@
-{ stdenvNoCC, fetchurl }:
+{
+  stdenvNoCC,
+  fetchurl,
+  lib,
+}:
 let
   wallpapers = [
     {
@@ -88,19 +92,34 @@ let
     }
   ];
 
-  wallpaperSrcs = map fetchurl wallpapers;
+  mkWallpaper =
+    {
+      name,
+      url,
+      sha256,
+    }:
+    fetchurl {
+      inherit name url sha256;
+    };
+
+  byName = lib.listToAttrs (map (w: lib.nameValuePair w.name (mkWallpaper w)) wallpapers);
 in
-stdenvNoCC.mkDerivation {
-  name = "wallpapers";
-  phases = [ "installPhase" ];
-  installPhase = ''
-    mkdir -p $out
-  ''
-  + (
-    map (wallpaper: "ln -s ${wallpaper} $out/${wallpaper.name}") wallpaperSrcs
-    |> builtins.concatStringsSep "\n"
-  );
-  meta = {
-    description = "My wallpapers";
+{
+  inherit byName;
+
+  inherit wallpapers;
+
+  all = stdenvNoCC.mkDerivation {
+    name = "wallpapers";
+    phases = [ "installPhase" ];
+    installPhase = ''
+      mkdir -p $out
+    ''
+    + (
+      lib.mapAttrsToList (name: path: "ln -s ${path} $out/${name}") byName |> lib.concatStringsSep "\n"
+    );
+    meta = {
+      description = "My wallpapers";
+    };
   };
 }

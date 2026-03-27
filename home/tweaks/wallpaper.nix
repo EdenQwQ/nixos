@@ -12,7 +12,7 @@
     {
       name = "frieren-butterflies-hydrogen.jpg";
       baseImageName = "frieren-butterflies";
-      path = "${pkgs.wallpapers}/frieren-butterflies.jpg";
+      path = pkgs.wallpapers.byName."frieren-butterflies.jpg";
       convertMethod = "lutgen";
       effects = {
         hydrogen = {
@@ -45,7 +45,7 @@
     {
       name = "bangqiaoyan-girl-sky-hydrogen.jpg";
       baseImageName = "bangqiaoyan-girl-sky";
-      path = "${pkgs.wallpapers}/bangqiaoyan-girl-sky.jpg";
+      path = pkgs.wallpapers.byName."bangqiaoyan-girl-sky.jpg";
       convertMethod = "gonord";
       effects.hydrogen.enable = true;
     }

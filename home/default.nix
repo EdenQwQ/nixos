@@ -35,6 +35,8 @@
       ALL_PROXY = "http://127.0.0.1:7890";
       HTTP_PROXY = "http://127.0.0.1:7890";
       HTTPS_PROXY = "http://127.0.0.1:7890";
+      http_PROXY = "http://127.0.0.1:7890";
+      https_PROXY = "http://127.0.0.1:7890";
       NIXPKGS_ALLOW_UNFREE = "1";
       NIXPKGS_ALLOW_INSECURE = "1";
     };

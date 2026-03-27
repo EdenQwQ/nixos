@@ -59,6 +59,11 @@ let
       NetworkComparisonTest
       rPackages.pls
       rPackages.MASS
+      igraph
+      ggraph
+      tidygraph
+      corrr
+      relaimpo
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {

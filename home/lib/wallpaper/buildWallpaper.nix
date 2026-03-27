@@ -30,7 +30,8 @@ let
     // (
       if path == null then
         {
-          path = "${pkgs.wallpapers}/${name}";
+          path =
+            pkgs.wallpapers.byName.${name} or (throw "Wallpaper '${name}' not found in pkgs.wallpapers.byName");
         }
       else
         { inherit path; }
