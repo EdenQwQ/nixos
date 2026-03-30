@@ -111,6 +111,7 @@
       "libvirtd"
       "video"
       "kvm"
+      "input"
     ];
   };
 

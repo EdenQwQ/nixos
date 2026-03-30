@@ -25,6 +25,7 @@ let
     inputs.dank-material-shell.homeModules.dank-material-shell
     inputs.caelestia-shell.homeManagerModules.default
     inputs.noctalia-shell.homeModules.default
+    inputs.waydeeper.homeManagerModules.default
   ]
   ++ (builtins.attrValues self.homeManagerModules);
 

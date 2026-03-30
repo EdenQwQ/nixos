@@ -96,11 +96,6 @@
       }
       {
         mode = "n";
-        key = "<Leader>2";
-        action = ":BufferLineGoToBuffer 2<cr>";
-      }
-      {
-        mode = "n";
         key = "<Leader>3";
         action = ":BufferLineGoToBuffer 3<cr>";
       }
@@ -108,6 +103,11 @@
         mode = "n";
         key = "<Leader>4";
         action = ":BufferLineGoToBuffer 4<cr>";
+      }
+      {
+        mode = "n";
+        key = "<Leader>5";
+        action = ":BufferLineGoToBuffer 5<cr>";
       }
       {
         mode = "t";
