@@ -146,6 +146,11 @@
       };
       dock.enabled = false;
       wallpaper.enabled = false;
+      nightLight = {
+        enabled = true;
+        forced = true;
+        nightTemp = "5000";
+      };
       desktopWidgets = {
         editMode = false;
         enabled = true;

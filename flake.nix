@@ -105,6 +105,6 @@
     hexecute.url = "github:ThatOtherAndrew/Hexecute";
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
     awww.url = "git+https://codeberg.org/LGFae/awww";
-    waydeeper.url = "git+file:///home/eden/Repos/waydeeper";
+    waydeeper.url = "git+file:///home/eden/Repos/waydeeper-rust";
   };
 }

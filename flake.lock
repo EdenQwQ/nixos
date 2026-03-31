@@ -199,6 +199,21 @@
         "type": "github"
       }
     },
+    "crane": {
+      "locked": {
+        "lastModified": 1774313767,
+        "narHash": "sha256-hy0XTQND6avzGEUFrJtYBBpFa/POiiaGBr2vpU6Y9tY=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "3d9df76e29656c679c744968b17fbaf28f0e923d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
     "dank-material-shell": {
       "inputs": {
         "nixpkgs": "nixpkgs_5",
@@ -1209,11 +1224,11 @@
     },
     "nixpkgs_19": {
       "locked": {
-        "lastModified": 1774386573,
-        "narHash": "sha256-4hAV26quOxdC6iyG7kYaZcM3VOskcPUrdCQd/nx8obc=",
+        "lastModified": 1774709303,
+        "narHash": "sha256-D3Q07BbIA2KnTcSXIqqu9P586uWxN74zNoCH3h2ESHg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "46db2e09e1d3f113a13c0d7b81e2f221c63b8ce9",
+        "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
         "type": "github"
       },
       "original": {
@@ -1647,6 +1662,27 @@
         "type": "github"
       }
     },
+    "rust-overlay_2": {
+      "inputs": {
+        "nixpkgs": [
+          "waydeeper",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774840424,
+        "narHash": "sha256-3Oi4mBKzOCFQYLUyEjyc0s5cnlNj1MzmhpVKoLptpe8=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "d9f52b51548e76ab8b6e7d647763047ebdec835c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
     "scenefx": {
       "inputs": {
         "nixpkgs": [
@@ -2021,21 +2057,22 @@
     },
     "waydeeper": {
       "inputs": {
+        "crane": "crane",
         "flake-utils": "flake-utils_5",
-        "nixpkgs": "nixpkgs_19"
+        "nixpkgs": "nixpkgs_19",
+        "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1774881107,
-        "narHash": "sha256-FVTsoJ1WTY4KN1MWjlURXh3UqOQNiziwWGAhsj7SGe4=",
-        "ref": "refs/heads/main",
-        "rev": "33b29e209a01a16419f23057726cb3a22f164411",
-        "revCount": 14,
+        "dirtyRev": "513dcbe23ac7393f1e16c4b6d124242ed496bfbe-dirty",
+        "dirtyShortRev": "513dcbe-dirty",
+        "lastModified": 1774931319,
+        "narHash": "sha256-aYYoy620oTc32v/gFmw51vkUTzG0S6GmVvY1+ZxOOfk=",
         "type": "git",
-        "url": "file:///home/eden/Repos/waydeeper"
+        "url": "file:///home/eden/Repos/waydeeper-rust"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/eden/Repos/waydeeper"
+        "url": "file:///home/eden/Repos/waydeeper-rust"
       }
     },
     "xwayland-satellite-stable": {

@@ -26,27 +26,27 @@ let
         killall swhks
         swhks &
         doas swhkd -c ~/.config/niri/swhkd/niri.swhkdrc &
-        awww kill
-        awww-daemon --namespace "background" &
-        awww-daemon --namespace "backdrop" &
+        # awww kill
+        # awww-daemon --namespace "background" &
+        # awww-daemon --namespace "backdrop" &
         # awww restore --namespace "background"
         # awww restore --namespace "backdrop"
         mihomo -d ~/.config/clash &
         wlsunset -s 00:00 -S 00:00 -t 5000 -T 5001 &
         sleep 0.2
       ''
-      + (
-        builtins.attrNames config.monitors
-        |> map (monitor: [
-          "awww img --namespace background -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-file)\""
-          "sleep 0.2"
-          "awww img --namespace backdrop -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-blurred-file)\""
-          "sleep 0.2"
-        ])
-        |> builtins.concatLists
-        |> builtins.concatStringsSep "\n"
-      )
-      + "\n"
+      # + (
+      #   builtins.attrNames config.monitors
+      #   |> map (monitor: [
+      #     "awww img --namespace background -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-file)\""
+      #     "sleep 0.2"
+      #     "awww img --namespace backdrop -o ${monitor} \"/home/${user}/Pictures/Wallpapers/generated/$(cat ~/Pictures/Wallpapers/${monitor}-blurred-file)\""
+      #     "sleep 0.2"
+      #   ])
+      #   |> builtins.concatLists
+      #   |> builtins.concatStringsSep "\n"
+      # )
+      # + "\n"
       + (
         if config.desktopShell == "caelestia" then
           # bash
