@@ -94,7 +94,7 @@ let
         ''
         ''
           binds {
-              Mod { release { toggle-overview; }; }
+              Shift_R { release { toggle-overview; }; }
         ''
       ]
       config.programs.niri.finalConfig
