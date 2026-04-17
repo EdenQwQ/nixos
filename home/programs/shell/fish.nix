@@ -4,8 +4,8 @@
     fish = {
       enable = true;
       shellAbbrs = {
-        nixu = "nh os switch --ask";
-        homeu = "nh home switch --ask";
+        nixu = "nh os switch --ask --impure";
+        homeu = "nh home switch --ask --impure";
         nixc = "doas systemctl start nh-clean.service";
         vim = "nvim";
         cd = "z";
