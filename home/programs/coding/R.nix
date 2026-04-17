@@ -64,6 +64,9 @@ let
       tidygraph
       corrr
       relaimpo
+      FNN
+      energy
+      bootnet
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {
