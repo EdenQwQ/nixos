@@ -83,6 +83,7 @@ let
     builtins.replaceStrings
       [
         "output \"${config.lib.monitors.mainMonitorName}\" {"
+        "binds {"
       ]
       [
         ''
@@ -90,6 +91,10 @@ let
               hot-corners {
                   top-right
               }
+        ''
+        ''
+          binds {
+              Mod { release { toggle-overview; }; }
         ''
       ]
       config.programs.niri.finalConfig

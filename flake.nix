@@ -56,7 +56,7 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     niri-unstable = {
-      url = "github:niri-wm/niri/wip/branch";
+      url = "github:JustinSpedding/niri/up-down-keybinds";
       flake = false;
     };
     niri = {
@@ -94,10 +94,10 @@
     };
     dank-material-shell.url = "github:AvengeMedia/DankMaterialShell";
     caelestia-shell = {
-      url = "github:caelestia-dots/shell";
+      url = "github:AyushKr2003/niri-caelestia-shell";
       inputs.quickshell.follows = "quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    caelestia-cli.url = "github:caelestia-dots/cli";
     noctalia-shell = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -105,6 +105,7 @@
     hexecute.url = "github:ThatOtherAndrew/Hexecute";
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
     awww.url = "git+https://codeberg.org/LGFae/awww";
-    waydeeper.url = "git+file:///home/eden/Repos/waydeeper-rust";
+    # waydeeper.url = "git+file:///home/eden/Repos/waydeeper-rust";
+    waydeeper.url = "github:EdenQwQ/waydeeper";
   };
 }
