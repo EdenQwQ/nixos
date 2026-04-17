@@ -6,7 +6,7 @@ if [ -z $wall ]; then
     exit 1
 fi
 output=$(niri msg -j focused-output | jq -r .name)
-awww img -o $output $wallpapers_dir/$wall --transition-type random --transition-duration 1 --namespace background
+waydeeper set --monitor $output $wallpapers_dir/$wall
 blurwall=$(echo $wall | sed 's/\.jpg$/-blurred.jpg/')
 awww img -o $output $wallpapers_dir/$blurwall --transition-type fade --namespace backdrop
 echo $wall > $HOME/Pictures/Wallpapers/"$output"-file
