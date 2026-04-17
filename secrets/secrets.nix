@@ -12,6 +12,7 @@ let
     "anyrouter_token"
     "kimi_token"
     "telegram_bot_token"
+    "openrouter_token"
   ];
 in
 builtins.listToAttrs (

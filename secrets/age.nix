@@ -10,5 +10,6 @@
     anyrouter_token.file = ./anyrouter_token.age;
     kimi_token.file = ./kimi_token.age;
     telegram_bot_token.file = ./telegram_bot_token.age;
+    openrouter_token.file = ./openrouter_token.age;
   };
 }
