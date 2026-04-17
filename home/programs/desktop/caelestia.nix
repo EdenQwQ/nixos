@@ -6,18 +6,6 @@
 }:
 {
   programs.caelestia = {
-    cli = {
-      enable = true;
-      settings.theme = {
-        enableTerm = false;
-        enableDiscord = false;
-        enableSpicetify = false;
-        enableBtop = false;
-        enableCava = false;
-        enableGtk = false;
-        enableQt = false;
-      };
-    };
     settings = {
       general.idle = {
         timeouts = [ ];
