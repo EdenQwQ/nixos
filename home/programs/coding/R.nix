@@ -67,6 +67,8 @@ let
       FNN
       energy
       bootnet
+      report
+      showtext
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {
