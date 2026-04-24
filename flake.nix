@@ -57,6 +57,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     niri-unstable = {
       url = "github:JustinSpedding/niri/up-down-keybinds";
+      # url = "github:Atan-D-RP4/niri/feat/layer-anims";
       flake = false;
     };
     niri = {
@@ -107,5 +108,6 @@
     awww.url = "git+https://codeberg.org/LGFae/awww";
     # waydeeper.url = "git+file:///home/eden/Repos/waydeeper-rust";
     waydeeper.url = "github:EdenQwQ/waydeeper";
+    driftwm.url = "github:malbiruk/driftwm";
   };
 }
