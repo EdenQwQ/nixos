@@ -30,6 +30,15 @@
     });
     inherit (inputs.awww.packages.${final.stdenv.hostPlatform.system}) awww;
     inherit (inputs.nixpkgs-new-libinput.legacyPackages.${final.stdenv.hostPlatform.system}) libinput;
+    libfprint = prev.libfprint.overrideAttrs (oldAttrs: {
+      src = final.fetchFromGitLab {
+        domain = "gitlab.freedesktop.org";
+        owner = "libfprint";
+        repo = "libfprint";
+        rev = "d79f157282085738ea8ffbe8c2ae96fb8b3ad831";
+        hash = "sha256-Ek5MxO+XgTeJ1wty0+WiMf1PUKJTyo/TjIgjWQV8wt8=";
+      };
+    });
   };
 
   inherit (inputs.niri.overlays) niri;
