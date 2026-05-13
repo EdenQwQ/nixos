@@ -50,6 +50,7 @@
     upower
     android-tools
     tree-sitter
+    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.agenix
   ];
   imports = [
     ./eye-candy.nix

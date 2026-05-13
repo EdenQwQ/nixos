@@ -16,6 +16,7 @@ let
   sharedHomeModules = [
     ../home
     ../nix/nixpkgs.nix
+    ../nix/github_token.nix
     inputs.stylix.homeModules.stylix
     inputs.niri.homeModules.niri
     inputs.nixvim.homeModules.nixvim
@@ -59,6 +60,7 @@ let
         extraSpecialArgs = {
           inherit
             inputs
+            nixpkgs
             self
             host
             user

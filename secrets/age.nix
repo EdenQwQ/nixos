@@ -11,5 +11,7 @@
     kimi_token.file = ./kimi_token.age;
     telegram_bot_token.file = ./telegram_bot_token.age;
     openrouter_token.file = ./openrouter_token.age;
+    mimo_token.file = ./mimo_token.age;
+    nix_github_token.file = ./nix_github_token.age;
   };
 }

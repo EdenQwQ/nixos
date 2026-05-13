@@ -29,7 +29,6 @@
       passthru.providedSessions = [ "scroll" ];
     });
     inherit (inputs.awww.packages.${final.stdenv.hostPlatform.system}) awww;
-    inherit (inputs.nixpkgs-new-libinput.legacyPackages.${final.stdenv.hostPlatform.system}) libinput;
     libfprint = prev.libfprint.overrideAttrs (oldAttrs: {
       src = final.fetchFromGitLab {
         domain = "gitlab.freedesktop.org";

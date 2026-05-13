@@ -33,7 +33,7 @@
             settings.global.excludes = [ "*.age" ];
             settings.formatter = {
               jsonc = {
-                command = "${pkgs.nodePackages.prettier}/bin/prettier";
+                command = "${pkgs.prettier}/bin/prettier";
                 includes = [ "*.jsonc" ];
               };
               scripts = {
@@ -49,7 +49,6 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-r.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-new-libinput.url = "github:skowalak/nixpkgs/libinput-update-1.31.0";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -106,8 +105,7 @@
     hexecute.url = "github:ThatOtherAndrew/Hexecute";
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
     awww.url = "git+https://codeberg.org/LGFae/awww";
-    # waydeeper.url = "git+file:///home/eden/Repos/waydeeper-rust";
     waydeeper.url = "github:EdenQwQ/waydeeper";
-    driftwm.url = "github:malbiruk/driftwm";
+    hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 }

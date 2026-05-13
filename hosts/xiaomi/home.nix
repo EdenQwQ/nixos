@@ -37,7 +37,7 @@
   stylix.cursor = {
     package = pkgs.hachiyo-cursors;
     name = "hachiyo";
-    size = 32;
+    size = 12;
   };
   home.stateVersion = "26.05";
 }

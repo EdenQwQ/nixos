@@ -19,6 +19,7 @@
     MOONSHOT_API_KEY = "$(cat ${config.age.secrets.kimi_token.path})";
     TELEGRAM_BOT_TOKEN = "$(cat ${config.age.secrets.telegram_bot_token.path})";
     OPENROUTER_API_KEY = "$(cat ${config.age.secrets.openrouter_token.path})";
+    XIAOMI_API_KEY = "$(cat ${config.age.secrets.mimo_token.path})";
   };
   home.packages = with pkgs; [
     inputs.kimi-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -26,5 +27,6 @@
     opencode
     codex
     gitingest
+    inputs.hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

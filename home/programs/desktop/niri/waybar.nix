@@ -135,10 +135,7 @@ in
 {
   programs.waybar = {
     # enable = true;
-    systemd = {
-      enable = true;
-      target = config.wayland.systemd.target;
-    };
+    systemd.enable = true;
   };
   home.file = {
     ".config/waybar/config.jsonc".text =

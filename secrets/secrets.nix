@@ -13,6 +13,8 @@ let
     "kimi_token"
     "telegram_bot_token"
     "openrouter_token"
+    "mimo_token"
+    "nix_github_token"
   ];
 in
 builtins.listToAttrs (
