@@ -107,5 +107,6 @@
     awww.url = "git+https://codeberg.org/LGFae/awww";
     waydeeper.url = "github:EdenQwQ/waydeeper";
     hermes-agent.url = "github:NousResearch/hermes-agent";
+    nixpkgs-mozilla.url = "github:mozilla/nixpkgs-mozilla";
   };
 }

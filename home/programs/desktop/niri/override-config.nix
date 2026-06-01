@@ -15,6 +15,14 @@ let
               xray true
               blur true
           }
+          popups {
+              opacity 0.75
+              geometry-corner-radius 15
+              background-effect {
+                  xray false
+                  blur true
+              }
+          }
       }
       window-rule {
           match is-floating=true
