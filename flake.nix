@@ -55,8 +55,9 @@
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
     niri-unstable = {
-      url = "github:JustinSpedding/niri/up-down-keybinds";
+      # url = "github:JustinSpedding/niri/up-down-keybinds";
       # url = "github:Atan-D-RP4/niri/feat/layer-anims";
+      url = "github:niri-wm/niri";
       flake = false;
     };
     niri = {
@@ -106,7 +107,5 @@
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     waydeeper.url = "github:EdenQwQ/waydeeper";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
-    nixpkgs-mozilla.url = "github:mozilla/nixpkgs-mozilla";
   };
 }

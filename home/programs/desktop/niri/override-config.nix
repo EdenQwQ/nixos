@@ -15,14 +15,6 @@ let
               xray true
               blur true
           }
-          popups {
-              opacity 0.75
-              geometry-corner-radius 15
-              background-effect {
-                  xray false
-                  blur true
-              }
-          }
       }
       window-rule {
           match is-floating=true
@@ -91,7 +83,6 @@ let
     builtins.replaceStrings
       [
         "output \"${config.lib.monitors.mainMonitorName}\" {"
-        "binds {"
       ]
       [
         ''
@@ -99,10 +90,6 @@ let
               hot-corners {
                   top-right
               }
-        ''
-        ''
-          binds {
-              Shift_R { release { toggle-overview; }; }
         ''
       ]
       config.programs.niri.finalConfig

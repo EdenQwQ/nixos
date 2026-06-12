@@ -17,7 +17,7 @@
             waybar = "pkill -USR1 .waybar-wrapped";
             dms = "dms ipc call bar toggle";
             caelestia = "echo pass";
-            noctalia-shell = "noctalia-shell ipc call bar toggle";
+            noctalia-shell = "noctalia msg bar-toggle";
           }
           .${config.desktopShell};
       }

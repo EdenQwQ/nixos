@@ -7,204 +7,54 @@
   ...
 }:
 {
-  programs.noctalia-shell = {
-    colors = with config.lib.stylix.colors.withHashtag; {
-      mError = base08;
-      mHover = base0E;
-      mOnError = base00;
-      mOnHover = base00;
+  programs.noctalia = {
+    systemd.enable = true;
+    customPalettes.stylix.dark = with config.lib.stylix.colors.withHashtag; {
+      mPrimary = base0D;
       mOnPrimary = base00;
-      mOnSecondary = base01;
+      mSecondary = base0E;
+      mOnSecondary = base00;
+      mTertiary = base0C;
+      mOnTertiary = base00;
+      mError = base08;
+      mOnError = base00;
+      mSurface = base00;
       mOnSurface = base05;
-      mOnSurfaceVariant = base07;
-      mOnTeritiary = base00;
-      mOutline = base02;
-      mPrimary = base0B;
-      mSecondary = base0A;
-      mShadow = "#000000";
-      mSurface = base01;
+      mHover = base0C;
+      mOnHover = base00;
       mSurfaceVariant = base01;
-      mTeritiary = base0C;
-    };
-    settings = {
-      setupCompleted = true;
-      bar = {
-        density = "comfortable";
-        floating = true;
-        showCapsule = true;
-        outerCorners = true;
-        marginVertical = 6;
-        marginHorizontal = 6;
-        widgets = {
-          center = [
-            {
-              id = "SystemMonitor";
-              showCpuTemp = true;
-              showCpuUsage = true;
-              showDiskUsage = false;
-              showMemoryAsPercent = false;
-              showMemoryUsage = true;
-              showNetworkoStats = false;
-              usePrimaryColor = true;
-            }
-          ];
-          left = [
-            {
-              id = "Workspace";
-              labelMode = "none";
-              hideUnoccupied = false;
-            }
-            {
-              id = "MediaMini";
-              autoHide = true;
-              scrollingMode = "hover";
-              showAlbumArt = true;
-              showVisualizer = true;
-              visualizerType = "wave";
-            }
-          ];
-          right = [
-            {
-              id = "Tray";
-              drawerEnabled = false;
-              colorizeIcons = false;
-              blacklist = [ ];
-            }
-            {
-              id = "Volume";
-              displayMode = "onhover";
-            }
-            {
-              id = "Battery";
-              displayMode = "alwaysShow";
-              warningThreshold = 30;
-            }
-            {
-              id = "Clock";
-              customFont = "Monofur Nerd Font Mono";
-              formatHorizontal = "HH:mm ddd, MMM dd";
-              formatVertical = "HH mm - dd MM";
-              useCustomFont = true;
-              usePrimaryColor = true;
-            }
-            {
-              id = "ControlCenter";
-              useDistroLogo = false;
-            }
-          ];
-        };
-      };
-      controlCenter.cards = [
-        {
-          enabled = true;
-          id = "profile-card";
-        }
-        {
-          enabled = true;
-          id = "shortcuts-card";
-        }
-        {
-          enabled = true;
-          id = "audio-card";
-        }
-        {
-          enabled = true;
-          id = "brightness-card";
-        }
-        {
-          enabled = true;
-          id = "weather-card";
-        }
-        {
-          enabled = true;
-          id = "media-sysmon-card";
-        }
-      ];
-      idle = {
-        enabled = true;
-        screenOffTimeout = 500;
-        lockTimeout = 560;
-        suspendTimeout = 1800;
-        fadeDuration = 10;
-      };
-      colorSchemes = {
-        generateTemplatesForPredefined = false;
-        useWallpaperColors = false;
-      };
-      general = {
-        avatarImage = "/home/${user}/.face";
-        forceBlackScreenCorners = false;
-        showScreenCorners = false;
-      };
-      location = {
-        name = "西湖";
-      };
-      ui = {
-        fontDefault = "Hug Me Tight";
-        fontFixed = "Maple Mono";
-        panelBackgroundOpacity = 0.85;
-      };
-      dock.enabled = false;
-      wallpaper.enabled = false;
-      nightLight = {
-        enabled = true;
-        forced = true;
-        nightTemp = "5000";
-      };
-      desktopWidgets = {
-        editMode = false;
-        enabled = true;
-        monitorWidgets = [
-          {
-            name = config.lib.monitors.mainMonitorName;
-            widgets = [
-              {
-                id = "Clock";
-                showBackground = true;
-                x = 80;
-                y = 100;
-              }
-              {
-                id = "Weather";
-                showBackground = true;
-                x = 80;
-                y = 300;
-              }
-            ];
-          }
-        ];
-      };
-    };
-  };
+      mOnSurfaceVariant = base04;
+      mOutline = base03;
+      mShadow = base00;
 
-  systemd.user.services = lib.mkIf (config.desktopShell == "noctalia-shell") {
-    noctalia-shell =
-      let
-        noctaliaPackage = inputs.noctalia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default;
-        noctaliaConfig = "/home/${user}/.config/noctalia/gui-settings.json";
-      in
-      {
-        Unit = {
-          After = [ "graphical-session.target" ];
-          PartOf = [ "graphical-session.target" ];
-          StartLimitIntervalSec = 60;
-          StartLimitBurst = 3;
-          X-Restart-Triggers = [
-            noctaliaPackage
-            noctaliaConfig
-          ];
+      terminal = {
+        foreground = base05;
+        background = base00;
+        cursor = base05;
+        cursorText = base00;
+        selectionFg = base05;
+        selectionBg = base02;
+        normal = {
+          black = base00;
+          red = base08;
+          green = base0B;
+          yellow = base0A;
+          blue = base0D;
+          magenta = base0E;
+          cyan = base0C;
+          white = base05;
         };
-        Install.WantedBy = [ "graphical-session.target" ];
-        Service = {
-          ExecStart = "${noctaliaPackage}/bin/noctalia-shell";
-          Restart = "on-failure";
-          RestartSec = 3;
-          TimeoutStartSec = 10;
-          TimeoutStopSec = 5;
-          Environment = [
-            "NOCTALIA_SETTINGS_FALLBACK=${noctaliaConfig}"
-          ];
+        bright = {
+          black = base03;
+          red = base08;
+          green = base0B;
+          yellow = base0A;
+          blue = base0D;
+          magenta = base0E;
+          cyan = base0C;
+          white = base07;
         };
       };
+    };
   };
 }

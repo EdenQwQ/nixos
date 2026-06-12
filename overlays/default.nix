@@ -43,5 +43,4 @@
   inherit (inputs.niri.overlays) niri;
   nur = inputs.nur.overlays.default;
   nix-matlab = inputs.nix-matlab.overlay;
-  inherit (inputs.nixpkgs-mozilla.overlays) firefox;
 }

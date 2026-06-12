@@ -5,10 +5,13 @@
   ...
 }:
 {
-  programs.gemini-cli = {
+  programs.antigravity-cli = {
     enable = true;
   };
   programs.claude-code = {
+    enable = true;
+  };
+  programs.pi-coding-agent = {
     enable = true;
   };
   home.sessionVariables = {
@@ -27,6 +30,5 @@
     opencode
     codex
     gitingest
-    inputs.hermes-agent.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
