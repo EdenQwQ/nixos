@@ -28,5 +28,5 @@
   };
   home.sessionVariables.QT_QPA_PLATFORMTHEME = "gtk3";
   services.wl-clip-persist.enable = true;
-  services.waydeeper.enable = true;
+  # services.waydeeper.enable = true;
 }

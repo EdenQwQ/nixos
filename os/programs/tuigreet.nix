@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   services.greetd = {
-    enable = true;
+    enable = false;
     settings.default_session = {
       command = # bash
         let
