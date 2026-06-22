@@ -69,6 +69,7 @@ let
       bootnet
       report
       showtext
+      rPackages.ranger
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {
