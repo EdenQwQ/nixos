@@ -99,8 +99,8 @@
       inputs.quickshell.follows = "quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    noctalia-shell = {
-      url = "github:noctalia-dev/noctalia-shell";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hexecute.url = "github:ThatOtherAndrew/Hexecute";

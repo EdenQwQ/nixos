@@ -1273,23 +1273,23 @@
         "type": "github"
       }
     },
-    "noctalia-shell": {
+    "noctalia": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1781275887,
-        "narHash": "sha256-27bVKMTwXumghIcgmRpHUVoIai2M5NmE2tEytVDbvyo=",
+        "lastModified": 1782223387,
+        "narHash": "sha256-s8rdbLLxuFO55dQHJBbNtZ/kQf4cRsRGjLtDJxSmRuY=",
         "owner": "noctalia-dev",
-        "repo": "noctalia-shell",
-        "rev": "8c7a9cf983bb1e69b990fdac68979ca1f8215ebb",
+        "repo": "noctalia",
+        "rev": "2b21b9839ff9466785a9b291c84d78bd738817c3",
         "type": "github"
       },
       "original": {
         "owner": "noctalia-dev",
-        "repo": "noctalia-shell",
+        "repo": "noctalia",
         "type": "github"
       }
     },
@@ -1476,7 +1476,7 @@
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixpkgs-wayland": "nixpkgs-wayland",
         "nixvim": "nixvim",
-        "noctalia-shell": "noctalia-shell",
+        "noctalia": "noctalia",
         "nur": "nur",
         "quickshell": "quickshell_2",
         "stylix": "stylix",

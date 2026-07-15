@@ -70,6 +70,10 @@ let
       report
       showtext
       rPackages.ranger
+      Rfast
+      ropenblas
+      RANN
+      ggh4x
       (buildRPackage {
         name = "eegUtils";
         src = fetchFromGitHub {

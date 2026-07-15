@@ -26,9 +26,9 @@
       enable = config.desktopShell == "caelestia";
       systemd.enable = config.desktopShell == "caelestia";
     };
-    programs.noctalia.enable = config.desktopShell == "noctalia-shell";
-    home.packages = lib.mkIf (config.desktopShell == "noctalia-shell") [
-      inputs.noctalia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default
+    programs.noctalia.enable = config.desktopShell == "noctalia";
+    home.packages = lib.mkIf (config.desktopShell == "noctalia") [
+      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

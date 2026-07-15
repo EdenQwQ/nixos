@@ -13,19 +13,20 @@
   libdrm,
   systemd,
   vulkan-loader,
+  pipewire,
 }:
 rustPlatform.buildRustPackage {
   pname = "halley";
-  version = "0.1.0";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "saltnpepper97";
     repo = "halley";
-    rev = "92ab43f71abf359456ca4f9da96c5b146e98b165";
-    hash = "sha256-3OEY0OdQvMfSNhzvw+lXkTBmyzT+ZiPZhWBXS87wTuo=";
+    rev = "dc3b901425e9aafe994b01566c20acc30484baed";
+    hash = "sha256-vx4zEJzVWZeUY3KF8fSWbdY1aCQjTLIE3XnPAq/j7Ho=";
   };
 
-  cargoHash = "sha256-Ze03sLTAWuxd6sghvsyghgwF9PjHcH5lIc99fwMdwp0=";
+  cargoHash = "sha256-ZAeOsmVwWg4FSKKSg7IUYJT/SGyd/y52CeukOznN8hQ=";
 
   nativeBuildInputs = [
     pkg-config
@@ -43,6 +44,7 @@ rustPlatform.buildRustPackage {
     libdrm
     systemd
     vulkan-loader
+    pipewire
   ];
 
   doCheck = false;
