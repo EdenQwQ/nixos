@@ -13,6 +13,7 @@
       shellAliases = {
         "ls" = "exa";
         "l" = "exa -lah --icons=auto";
+        "analyze" = "ls *.Rmd | fzf | xargs -I {} R -e \"rmarkdown::render('{}', quiet = FALSE)\"";
       };
       shellInit = ''
         zoxide init fish | source

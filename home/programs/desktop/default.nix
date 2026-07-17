@@ -19,7 +19,6 @@
     wlsunset
     xwayland-satellite
     wmname
-    inputs.hexecute.packages.${system}.default
     halley
   ];
   home.file."scripts" = {

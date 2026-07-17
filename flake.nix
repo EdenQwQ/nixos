@@ -70,10 +70,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim.url = "github:nix-community/nixvim/nixos-25.11";
-    nil = {
-      url = "github:oxalica/nil";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixd = {
       url = "github:nix-community/nixd";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -103,7 +99,6 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hexecute.url = "github:ThatOtherAndrew/Hexecute";
     kimi-cli.url = "github:MoonshotAI/kimi-cli";
     awww.url = "git+https://codeberg.org/LGFae/awww";
     waydeeper.url = "github:EdenQwQ/waydeeper";
