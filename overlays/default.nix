@@ -29,6 +29,16 @@
       passthru.providedSessions = [ "scroll" ];
     });
     inherit (inputs.awww.packages.${final.stdenv.hostPlatform.system}) awww;
+    libfprint = prev.libfprint.overrideAttrs (oldAttrs: {
+      src = final.fetchFromGitLab {
+        domain = "gitlab.freedesktop.org";
+        owner = "libfprint";
+        repo = "libfprint";
+        rev = "ecb975052d99c439c3776764a69675ef61ef9964";
+        hash = "sha256-sr156YaPIp9vFhbCnMXYc+xAR/JMNDn4psWZ5vIEYe8=";
+      };
+      patches = [ ];
+    });
   };
 
   inherit (inputs.niri.overlays) niri;
