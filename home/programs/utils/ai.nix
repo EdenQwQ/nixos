@@ -30,5 +30,6 @@
     opencode
     codex
     gitingest
+    pi-coding-agent
   ];
 }
