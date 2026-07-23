@@ -36,14 +36,8 @@
       "nix packages" = "https://search.nixos.org/packages?";
       "nix options" = "https://search.nixos.org/options?";
       "home manager options" = "https://mipmip.github.io/home-manager-option-search";
-      catppuccin = "https://github.com/catppuccin/catppuccin";
-      gpt = "https://127.0.0.1:3000";
       bilibili = "https://bilibili.com";
-      "semantic scholar" = "https://www.semanticscholar.org";
       "google scholar" = "https://scholar.google.com";
-      mendeley = "https://www.mendeley.com/library";
-      "sona pi toki pona" = "https://www.youtube.com/playlist?list=PLuYLhuXt4HrQIv3xnDxZqRaLfmxB2U5rJ";
-      "lipu Linku" = "https://linku.la";
     };
 
     settings.colors =
